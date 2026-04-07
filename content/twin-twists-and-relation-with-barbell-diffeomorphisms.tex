@@ -1,0 +1,90 @@
+\chapter{Twin twists and relation with barbell diffeomorphisms}
+\label{chap:twin-twists-and-relation-with-barbell-diffeomorphisms}
+
+First we derive a standard model for Montesino twins: Consider $X=S^1\times S^1\times D^2$ with boundary $\partial X= S_l^1\times S_S^1\times S_R^1$, where $S_l^1=S^1\times 1\times 1$, $S_S^1=-1\times S^1\times 1$, $S_R^1={-1}\times 1\times \partial D^2$. Then we do surgery on $\nu(1\times S^1\times 0)$, and let $X'=(X\setminus \nu(1\times S^1\times 0))\cup D^2\times S^2$ be the resulting manifold. Then the core $T_R=(S^1\times S^1\times 0)$ of $X$ becomes $R=(T_R\setminus I\times S^1 )\cup \partial I\times D^2$, which is a 2-sphere with normal sphere $S_R^1$, and $S=0\times S^2\subset D^2\times S^2$ is another 2-sphere with normal sphere $S_S^1$. Moreover, $R$ intersects with $S$ transversely at 2 points. The resulting manifold $X'$ is just a tubular neighborhood of $R\cup S$ with the same boundary $\partial X'=\partial X=S_l^1\times S_S^1\times S_R^1$. Centered at $*=(-1,1,1)$, $S_l^1$ is homotopic to a longitude of $X'$, that is, $\pi_1(\partial X',*)\to \pi_1(X',*)\cong \pi_1(S^2\vee S^2\vee S^1,*)=\mathbb{Z}$ sends $[S_l^1]$ to 1 after a suitable orientation. An easy way to see that is, $\pi_1(\partial X,*)\to \pi_1(X,*)$ simply kills $S_R^1$ and sends others via identity, and surgering $X$ to $X'$ simply kills $S_S^1$ since it's a parallel copy of $1\times S^1\times 0$, that means $\pi_1(X')=\pi_1(X)/[S_S^1]=\mathbb{Z}[S_l^1]$. Moreover, a simple way to construct a longitude in $X'$ is to consider $\{p,q\}=R\cap S$, and choose $\gamma_R\subset R, \gamma_S\subset S$ connecting $p$ and $q$, then the resulting $\gamma_R\cup_{p,q} \gamma_S$ is a longitude of $X'$. 
+
+A standard twin twist is a Dehn twist near the boundary of $X'$, that is, choose a neighborhood of $\partial X'=I\times S_l^1\times S_S^1\times S_R^1$, and let $\phi_D\in \Diff(I\times S_l^1,\partial)$ be the standard Dehn twist, then twin twist $\tau$ is identity-extension of $\phi_D\times \id\times \id\in \Diff(\nu(\partial X'),\partial)$ in $\Diff(X',\partial)$.
+
+We provide a more natural way to construct the twin twist $\tau$: Consider a loop of $S^1$ in $X$: $\gamma_t: S^1\to e^{2\pi i t}\times S^1\times 0$, the isotopy extension of $\gamma_t$ at $t=1$ induces a diffeomorphism on $X$ which fixes $\gamma_0$. Moreover, it can be made to fix the whole core $T_R$, that is, it induces a diffeomorphism on $X\setminus \nu T_R=\nu (\partial X)$, which is exactly $\phi_D\times \id\times \id$. Therefore $\tau$ is the induced diffeomorphism after surgering $\gamma_0$. 
+
+\begin{definition}
+   A \emph{Montesino twin} in $M^4$ is a pair $W=(R,S)$ where $R,S$ are two embedded $S^2$ in $M$ with trivial normal bundle and $R$ intersects $S$ transversely at 2 points. Equivalently, a Montesino twin in $M^4$ is an embedding $i_W: X'\hookrightarrow M$. The twin twist induced by $W$ is just the implanted diffeomorphism $\tau$, denoted by $\tau_W$. 
+\end{definition}
+
+Any twin twist is induced by a \emph{parameterised surgery of index one} (see \cite{kosanović2025diffeomorphisms4manifoldsgraspers} for details) we will briefly describe below:
+
+\begin{definition} \label{def:parameterised-surgery}
+    Given a framed embedded $S^2$ in $M^4$, that is, $\nu S: S^2\times D^2\to M^4$, let $M_{\nu S}:=(M\setminus \nu S) \cup D^3\times S^1$ be the manifold obtained by performing surgery on $S$. We say a diffeomorphism $\phi$ of $M$ is induced by a \emph{parameterised surgery of index one} if $\phi$ is in the image of $\text{ps}_{\nu S}$:
+    $$\text{ps}_{\nu S}: \pi_1(\Emb(\nu S^1, M_{\nu S}), i_0)\to \pi_0\Diff(M\setminus \nu S, \partial)\xrightarrow{\cup \id_{\nu S}} \pi_0\Diff(M,\partial)$$
+    where $i_0=0\times S^1\subset M_{\nu S}$ with natural framing is the base point of the embedding space and the first map is induced by isotopy extension.
+\end{definition}
+
+\begin{proposition}
+    For any Montesino twin $W=(R,S)$ in $M$, the twin twist $\tau_W$ is induced by a \emph{parameterised surgery of index one} on $S$. 
+\end{proposition}
+\begin{proof}
+    By the standard model of Montesino twins we have constructed, we do surgery on $S$ we get an embedding $i: X=S^1\times S^1\times D^2=\nu T^2\to M_{\nu S}$ with $i_0=i(1\times S^1\times 0)$. By the second way we describe twin twist $\tau$, $\tau_W=\text{ps}_{\nu S}(\gamma_t)$ where $\gamma_t: S^1\to i(e^{2\pi it}\times S^1\times 0)\subset M_{\nu S}$.
+\end{proof}
+
+\begin{proposition} \label{prop:twist-is-pseudo-isotopic-to-id}
+    When $W=(R,S)$ with $S$ unknotted, then there exists a loop $\mathcal{H}\in \pi_0\mathcal{P}$ of handle decompositions of $M\times I$ with a single (1,2)-cancelling pair resulting in $\tau_W$. In particular, $\tau_W$ is pseudo-isotopic to identity with the corresponding Cerf diagram being a single eye of (1,2)-handle pair. 
+\end{proposition}
+
+\begin{proof}
+    When $S$ is an unknotted $S^2$, $M_{\nu S}=M\# S^3\times S^1=M\# S^1\times S^3$, this can be regarded as attaching a trivial one handle. Then Prop 3.3 proved that $\tau_W$ is induced by an element $\gamma\in \pi_1(\Emb(\nu S^1, M\# S^1\times S^3), i_0)$ where $i_0=S^1\times *\in S^1\times S^3$. Then $\tau_W=\phi_\gamma(1)|_{M\# S^1\times S^3\setminus \nu S^1}\bigcup \id_{\nu S^2}=f_\mathcal{H}$ where $\phi_\gamma (t)$ denotes the time $t$ isotopy extension on $M\# S^1\times S^3$.
+\end{proof}
+
+Then we recall the definition of an (implanted) barbell diffeomorphism and prove that any implanted barbell diffeomorphism is a special twin twist.
+
+\begin{definition}
+    The \emph{standard barbell diffeomorphism} is defined as follows: Consider $D^4$ and 2 disjoint properly embedded arcs $I_1, I_2$ in it. Let $I_1$ rotate around a normal sphere $S^2\times *\subset SN(I_2)=S^2\times I_2$ and comes back. This isotopy extension induces an element in $\Diff(D^4\setminus (\nu I_1\cup \nu I_2)=S^2\times D^2 \natural S^2\times D^2, \partial)$. The \emph{implanted barbell diffeomorphism} is obtained by implanting a barbell $\beta=(S_1, S_2, \gamma)$, i.e. $S_1,S_2$ two framed embedded $S^2$ with an arc connecting them, and extending the barbell diffeomorphism by $\id$ on $M\setminus \nu \beta$.
+\end{definition}
+
+\begin{proposition}
+    Let $\beta=(R_0,S,\gamma)$ be an implanted barbell in $M$. Finger-push $R_0$ along $\gamma$ into $S$ to get another sphere $R$, then $R$ intersects $S$ transversely at 2 points. Then the implanted barbell diffeomorphism by $\beta$ is isotopic to twin twist $\tau_W$ where $W=(R,S_0)$.
+\end{proposition}
+
+\begin{proof}
+We first describe $\tau_W$ with $W=(R,S)$: After surgering along $S_0$, we get an embedding $\nu T_R\to M_{\nu S}$ where $T_R$ is a torus which has a framing induced by $\nu R_0$, this corresponds to an element $[\nu T_R]$ in $\pi_1(\Emb(\nu S^1, M_{\nu S}),*)$, then we have:
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXHBpXzEoRW1iKFNeMSwgTV97XFxudSBTfSksKikgIl0sWzEsMCwiXFxwaV8wXFx0ZXh0e0RpZmZ9KE1fe1xcbnUgU31cXHNldG1pbnVzIFxcbnUgU14xPU1cXHNldG1pbnVzXFxudSBTLCBcXHBhcnRpYWwpIl0sWzIsMCwiXFxwaV8wXFx0ZXh0e0RpZmZ9KE0sXFxwYXJ0aWFsKSJdLFswLDEsIlxccGlfMShFbWIoSV8xLCBEXjJcXHNldG1pbnVzIFxcbnUgSV8yPVNeMlxcdGltZXMgRF4yKSwqKSJdLFsxLDEsIlxccGlfMFxcdGV4dHtEaWZmfShTXjJcXHRpbWVzIEReMlxcbmF0dXJhbCBTXjJcXHRpbWVzIEReMixcXHBhcnRpYWwpIl0sWzMsMF0sWzAsMV0sWzEsMiwiXFxjdXAgaWRfe1xcbnUgU30iXSxbNCwxXSxbMyw0XV0=
+\[\begin{tikzcd}[row sep=large, column sep=small]
+	{\pi_1(\Emb(\nu S^1, M_{\nu S}),*) } & {\pi_0\Diff(M_{\nu S}\setminus \nu S^1=M\setminus\nu S, \partial)} & {\pi_0\Diff(M,\partial)} \\
+	{\pi_1(\Emb(\nu I_1, D^2\setminus \nu I_2=S^2\times D^2),*)} & {\pi_0\Diff(S^2\times D^2\natural S^2\times D^2,\partial)}
+	\arrow[from=1-1, to=1-2]
+	\arrow["{\bigcup \id_{\nu S}}", from=1-2, to=1-3]
+	\arrow[from=2-1, to=1-1]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=1-2]
+\end{tikzcd}\]
+
+The first line is just $\text{ps}_{\nu S}$ so by Prop 3.3 it sends $[\nu T_R]$ to $\tau_W$. On the other hand, when $S^1$ goes around $T_R$, it just goes along $\gamma$, winds $R$ around and then comes back. This is exactly what $I_1$ does in the standard barbell. Thus we just implant $(I_1, S^2\times D^2)$ into $M_{\nu S}$ (see Figures in \Cref{eg:barbell-is-twin-twist} below). The resulting diffeomorphism in $M_{\nu S}\setminus \nu S^1=M\setminus \nu S$ is the barbell diffeomorphism with implanted $\beta=(R_0, \text{normal sphere of }S^1=S, \gamma)$, when extending to $M$ it's still the same barbell diffeomorphism.
+\end{proof}
+
+Combining the above two propositions we get:
+
+\begin{corollary}
+    For any implanted $\beta=(R,S,\gamma)$ with $S$ unknotted in $M$, the implanted barbell diffeomorphism is pseudo-isotopic to identity by $g_\beta\in \pi_0\mathcal{P}$ with the corresponding Cerf diagram being a single eye of (1,2)-handle pair. Moreover, it's induced from an element $[\nu T_R]\in \pi_1(\Emb(S^1\times D^3, M\# S^1\times S^3), *)$.
+\end{corollary}
+
+\begin{example} \label{eg:barbell-is-twin-twist}
+    Here we draw the corresponding loop in $\pi_1(\Emb(S^1, S^1\times D^3\# S^1\times S^3), *)$ (for simplicity I omit the framing but it's just the
+     natural framing induced by $\nu T_R|_{S^1}$ and $\nu (S^1,T_R)$) which corresponds to Gabai's constructions $\delta_k$ (see \Cref{fig:barbell-k,fig:finger-push,fig:T_R_for_barbell_k}).
+\end{example}
+
+\begin{figure}[!ht]
+    \includegraphics[width=0.5\textwidth]{barbell-k.png}
+    \caption{The implanted barbell $\delta_4$ in $M=S^1\times D^3$}
+    \label{fig:barbell-k}
+\end{figure}
+
+\begin{figure}[!ht]
+    \includegraphics[width=0.5\textwidth]{finger_push_of_barbell_k.png}
+    \caption{Finger-push $R_0$ to get $R$ such that $R\cap S=2$ points}
+    \label{fig:finger-push}
+\end{figure}
+
+\begin{figure}[!ht]
+    \includegraphics[width=0.8\textwidth]{T_R_for_barbell_k.png}
+    \caption{Do surgery along $S$ to get an embedded torus $T_R$ in $S^1\times D^3\# S^1\times S^3$ with the standard $S^1$ (green one), this $T_R$ determines an element in $\pi_1(\Emb(S^1, S^1\times D^3\# S^1\times S^3),*)$ which is a loop of handle decompositions $\mathcal{H}=\{H_t,t\in S^1\}$ (a loop of (1,2)-handle pair) of $S^1\times D^3\times I$ which results in the barbell diffeomorphism $\delta_4=\tau_W$ where $W=(R,S)$.}
+    \label{fig:T_R_for_barbell_k}
+\end{figure}

@@ -1,0 +1,41 @@
+\ifdefined\ONLINEVERSION
+  \PassOptionsToClass{oneside}{book}
+\fi
+
+\documentclass[11pt, a4paper]{book}
+
+\input{preamble/main}
+
+\begin{document}
+
+\ifdefined\ONLINEVERSION
+  \includepdf{frontcover.png}
+\fi
+
+\include{frontmatter/title}
+\include{frontmatter/verso}
+\include{frontmatter/dedication}
+
+\frontmatter
+\tableofcontents
+\include{frontmatter/editor-preface}
+\include{frontmatter/introduction}
+
+\mainmatter
+\include{content/cerf-theory-and-parameterised-handle-constructions-version}
+\include{content/twin-twists-and-relation-with-barbell-diffeomorphisms}
+\include{content/changing-from-12-handle-pair-to-23-handle-pair}
+\include{content/computations-for-the-second-hatcher-wagoner-invariant}
+\include{content/generalizations-to-immersed-barbell-diffeomorphisms}
+
+\backmatter
+\nocite{*}
+\printbibliography[heading=bibintoc]
+
+\label{LastPage}
+
+\ifdefined\ONLINEVERSION
+  \includepdf{backcover.png}
+\fi
+
+\end{document}

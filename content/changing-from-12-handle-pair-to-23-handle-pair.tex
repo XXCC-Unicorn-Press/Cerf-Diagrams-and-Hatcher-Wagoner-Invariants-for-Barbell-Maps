@@ -1,0 +1,164 @@
+\chapter{Changing from (1,2)-handle pair to (2,3)-handle pair}
+\label{chap:changing-from-12-handle-pair-to-23-handle-pair}
+
+The author first heard the excellent idea from \cite{Gay_2025}. This is just the 5-dimensional Kirby calculus, where in dimension 4, we use dotted unknotted $S^1=\partial D^2\subset M^3$ to represent a 1-handle, and framed $S^1\subset M$ to represent 2-handle. The central idea is that when the framed $S^1$ is unknotted, \emph{swapping the dotted circle and the 0-framed circle} changes the cobordism but results in the same boundary manifold. 
+
+In this chapter we first describe the dotted version of trivial 1 handles and trivial 2 handles in a 5-dimensional handle construction $H$ on $X^5=M\times I$, then derive the strategy of \emph{dotted and 0-framed replacement}. After that, we move on to the one-parameter versions of both, namely, dotted version of a Cerf diagram containing a single eye of (1,2)-handle pair which corresponds to an element in $\pi_1(\Emb(S^1\times D^3, M\# S^1\times S^3),\Emb_0(S^1\times D^3, M\# S^1\times S^3))$, and carefully develop the \emph{one-parameter version of dotted and 0-framed replacement}.
+
+Consider the trivial cobordism $Z=M\times I$ from $M$ to $M$, if we attach a one handle on top of $Z$, we get $Z_1=Z\cup h_1$ which is a cobordism from $M$ to $M_1=(M\setminus S^0\times D^4) \cup D^1\times S^3=M\# S^1\times S^3$. If we push the one handle into original $Z=M\times I$, we know that it's the same as cutting a neighborhood of an unknotted properly embedded $D^3$ in $M\times I$, that is, $Z_1=M\times I\setminus \nu D_{in}^3$ where $D^3_{in}$ is obtained as follows: Choose an embedding $i: D^3\to M\times I$, fix $i(\partial D^3)$ then push $i(D^3)$ into $M\times I$ to get $D_{in}^3$, then remove $\nu D_{in}^3$ we get the same cobordism $Z_1$. Then when the attaching sphere $S^1$ of a two handle goes through $S^1\times S^3\setminus D^4\subset M_1$, by slightly perturbing the attaching region, $S^1$ can be made disjoint from $S^1\times *\in S^1\times S^3$, then in the dotted version, the $S^1$ can be seen in $M\setminus \nu (\partial D^3)$. And whenever $S^1$ goes through the belt sphere $*\times S^3$, in the dotted version, $S^1\subset M\setminus \nu (\partial D^3)$ intersects with that $D^3$. In short, the dotted version of a one handle can be described as:
+
+\begin{definition}
+    For a 5-dimensional cobordism $Z$ from $\partial_- Z$ to $\partial_+ Z=M$ with $M$ connected, the \emph{dotted version of describing a new cobordism} $Z_1=Z\cup h_1$ is by choosing an embedding $\beta^\bullet :D^3\hookrightarrow M$ with $\beta:=\partial D^3$ denoting a dotted 2-sphere, then $Z_1$ is diffeomorphic to $Z\setminus \nu \beta^\bullet _{in}$ with $\beta_{in}^\bullet : D^3\hookrightarrow Z$ obtained by pushing interior of $\beta^\bullet (D^3)$ into $Z$ a bit. Whenever the attaching sphere of any 2-handle runs over the belt sphere of $h_1$, it intersects $\beta^\bullet$ (or equivalently, it links with $\beta$).
+\end{definition}
+
+Running the same story of a trivial 2-handle, i.e. the attaching region is a 0-framed unknotted $S^1=\partial D^2$ with $D^2\hookrightarrow M$, we get the dotted version of a trivial 2-handle:
+
+\begin{definition}
+    For a 5-dimensional cobordism $Z$ from $\partial_- Z$ to $\partial_+ Z=M$ with $M$ connected, the \emph{dotted version of describing a new cobordism $Z_1=Z\cup h_2$ with $h_2$ a trivial 2-handle}, is by choosing an embedding $\gamma^\bullet :D^2\hookrightarrow M$ with $\gamma:=\partial D^2$ denotes as a dotted 1-sphere, then $Z_1$ is diffeomorphic to $Z\setminus \nu \gamma^\bullet _{in}$ with $\gamma^\bullet_{in}: D^2\hookrightarrow Z$ obtained by pushing interior of $\gamma^\bullet (D^2)$ into $Z$ a bit. Whenever the attaching sphere of any 3-handle runs over the belt sphere of $h_2$, it intersects with $\gamma^\bullet$ (or equivalently, it links with $\gamma$).
+\end{definition}
+
+Now if we are giving \emph{both} data from the above 2 definitions, we can perform the \emph{dotted and 0-framed replacement}:
+
+\begin{proposition}
+    For 5-dimensional cobordism $Z$ with $\partial_+ Z=M$ Suppose we are given $\beta^\bullet: D^3\hookrightarrow M$, $\gamma^\bullet: D^2\hookrightarrow M$ with $\beta,\gamma$ the corresponding boundary embeddings. If $\gamma S^1\cap \beta S^2=\emptyset$, then $\partial_+(Z\setminus \nu \beta^\bullet_{in} \cup _{(\gamma, 0)}  h_2)=\partial_+(Z\setminus \nu \gamma^\bullet _{in} \cup_{(\beta, 0)} h_3)  $. Here $(\gamma, 0)$ means that the attaching sphere of $h_2$ is $\gamma$ and the framing is induced by $\nu (\gamma, \gamma^\bullet)\oplus \nu (\gamma^\bullet, M)|_{\gamma}$, similar for $(\beta,0)$.
+\end{proposition}
+
+\begin{proof}
+    Both sides are $(M\setminus (\nu \beta \cup \nu \gamma))\cup_{(\beta,0)} D^3\times S^1 \cup _{(\gamma, 0)} D^2\times S^2$.
+\end{proof}
+
+\begin{remark}
+    Later on in the dotted version, when we say the attaching region $S^{i-1}\times D^{5-i}$ of some handle $h_i$ ($i=2$ or $3$) is \emph{0-framed}, we will specify a $D^i\hookrightarrow M$ with the attaching sphere $S^{i-1}=\partial D^i$, and the framing is naturally induced by $\nu (S^{i-1},D^i)\oplus \nu(D^i,M)|_{S^{i-1}}$. Usually the $D^i$ is clear from the context.
+\end{remark}
+
+\begin{remark} \label{rmk:replacement}
+    Let $Z'=Z\setminus \nu \beta^\bullet_{in} \cup _{(\gamma, 0)}  h_2$ and $Z''=Z\setminus \nu \gamma^\bullet _{in} \cup_{(\beta, 0)} h_3$. Note that the two cobordisms result in the same boundary manifolds but they are different cobordisms themselves. In fact, when $Z=M\times I$, we can embed $Z'$ into a bigger $ M\times I$ such that $Z'\cup_{\partial_+ Z'=\partial_-\bar{Z''}} \bar{Z''}=M\times I$ where $\bar{Z''}$ denotes the orientation-reversing cobordism from $\partial_+ Z''$ to $\partial_- Z''$ (see \Cref{fig:replacement-1}).
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.3\textwidth]{replacement-1.png}
+        \caption{$Z'\cup \bar{Z}''=M\times I$}
+        \label{fig:replacement-1}
+    \end{figure}
+\end{remark}
+
+
+Recall what we obtained in the last chapter: For any half-unknotted barbell in $M^4$, we find a loop of framed $S^1$, i.e. an element in $\pi_1(\Emb(S^1\times D^3, M\# S^1\times S^3),*)$ which represents (by the map $\text{ps}_{\nu S}$) that barbell diffeomorphism. And thus, it gives a Cerf diagram containing a single eye of (1,2)-handle pair which results in the barbell diffeomorphism. And our original goal is to find a Cerf diagram containing a single eye of (2,3)-handle pair resulting in the same barbell diffeomorphism, then calculate its Hatcher-Wagoner invariants. Therefore, the only thing we need to do is to change the eye of (1,2)-handle pair into the eye of (2,3)-handle pair. Then the natural idea is to do the \emph{one-parameter version of dotted and 0-framed replacement}. To do that, we need the following lemma(this appeared in the work of Gay in \cite{Gay_2025} when $M=S^4$, and there Gay was going from the opposite direction, namely, to change a certain eye of (2,3)-handle pair into an eye of (1,2)-handle pair, but the idea of the proof is totally the same):
+
+\begin{lemma} \label{lem:one-parameter-replacement}
+    Consider a one-parameter family of embeddings: $\beta^\bullet_t: D^3\hookrightarrow M$(denote $\beta_t=\partial\beta_t^\bullet$) and $\gamma_t: S^1\hookrightarrow M, t\in [0,1]$ with the following properties:
+
+    \begin{enumerate}[label=\emph{(\arabic*)}]
+        \item $\gamma_0$ extends to $\gamma_0^\bullet: D^2\hookrightarrow M$, i.e. $\gamma_0^\bullet|_{\partial D^2}=\gamma_0$, moreover, $\gamma_0^\bullet$ intersects $\beta_0$ transversely at a single point.
+        \item $\beta_1^\bullet =\beta_0^\bullet$ and $\gamma_1=\gamma_0$.
+        \item For all $t\in [0,1]$, $\gamma_t \cap \beta_t=\emptyset$.
+        \item $\gamma_i$ intersects $\beta_i^\bullet$ transversely at a single point, for $i\in\{0,1\}$.
+    \end{enumerate}
+
+    Then there exists an extension of $\beta_t^\bullet$ and $\gamma_t$ to $t\in [0,3]$ and a one-parameter family of embeddings $\gamma_t^\bullet: D^2\hookrightarrow M, t\in [0,3]$ satisfying:
+
+    \begin{enumerate}[label=\emph{(\arabic*)}]
+        \item For all $t\in [0,1]$, $\gamma_t$ and $\beta_t^\bullet$ stay the same as given.
+        \item For $t\in[0,3]$, $\partial\gamma_t^\bullet=\gamma_t$.
+        \item $\beta_3^\bullet=\beta_0^\bullet$ and $\gamma_3^\bullet=\gamma_0^\bullet$.
+        \item For all $t\in [1,3]$, $\gamma_t$ intersects $\beta_t^\bullet$ transversely at a single point.
+        \item $\beta_0=\beta_3$ intersects $\gamma_0^\bullet =\gamma_3^\bullet$ transversely at a single point.
+        \item The path $\gamma_t^\bullet, t\in [0,3]$ is null homotopic rel $t\in \{0,3\}$ in $\Emb(D^2, M)$.
+    \end{enumerate}
+\end{lemma}
+
+\begin{proof}
+    First we construct $\gamma_t^\bullet$ for $t\in [0,1]$: Since $\beta_t \cap \gamma_t=\emptyset$, choose an isotopy $\psi_t: M\to M$ which sends $\gamma_0$ to $\gamma_t$ and sends $\beta_0$ to $\beta_t$, then let $\gamma_t^\bullet :=\psi_t(\gamma_0^\bullet)$. 
+
+    But now $\gamma_1^\bullet$ may not be equal to $\gamma_0^\bullet$. Then we construct $\gamma_t^\bullet$ and $\beta_t^\bullet$ for $t\in [1,2]$ such that $\gamma_0^\bullet=\gamma_2^\bullet$: Let $\phi_t: M\to M$ be the isotopy such that $\phi_t(\gamma_{1}^\bullet)=\gamma_{2-t}^\bullet$ then define $\gamma_t^\bullet=\phi_t(\gamma_1^\bullet)$ and $\beta_t^\bullet=\phi_t(\beta_1^\bullet)$.
+
+    But now $\beta_2^\bullet$ may not be equal to $\beta_0^\bullet$. Then we construct $\gamma_t^\bullet$ and $\beta_t^\bullet$ for $t\in [2,3]$ such that $\gamma_t^\bullet=\gamma_2^\bullet=\gamma_0^\bullet$ for $t\in [2,3]$ and $\beta_3^\bullet=\beta_0^\bullet$: By condition (4), $\beta_0^\bullet$ is a normal disk of $\gamma_0$ and $\beta_1^\bullet$ is a normal disk of $\gamma_1$, since $\gamma_2=\phi_2(\gamma_1)=\gamma_0$ and $\beta_2^\bullet =\phi_2(\beta_1^\bullet)$, so $\beta_2^\bullet$ is also a normal disk of $\gamma_2=\gamma_0$. That means, both $\beta_2^\bullet$ and $\beta_0^\bullet$ are normal disks of $\gamma_0$, then we can isotope $\beta_2^\bullet$ to $\beta_0^\bullet$ during $t\in [2,3]$, one way is to shrink $\beta_2^\bullet$ to $\beta_t^\bullet$ inside $\beta_2^\bullet$ to a standard normal ball of $\gamma_0$ and then expand back to $\beta_0^\bullet$.
+
+    Then from the construction one can see directly that conditions (1), (2), (3), (5) are satisfied. For condition (4), for $t\in [1,2], |\gamma_t\cap \beta_t^\bullet|=|\phi_t\gamma_1\cap \phi_t\beta_1^\bullet|=|\gamma_1\cap \beta_1^\bullet|=1$, for $t\in [2,3]$, $\beta_t^\bullet$ is always a normal disk of $\gamma_t=\gamma_0$ so satisfied. For condition (6), by $\gamma_t^\bullet=\gamma_{2-t}^\bullet, t\in [0,2]$ and $\gamma_t^\bullet=\gamma_0^\bullet, t\in [2,3]$, then of course the condition is satisfied.
+\end{proof}
+
+\begin{proposition}[one-parameter version of dotted and 0-framed replacement] \label{prop:one-parameter-version}
+    Suppose that $\beta_t^\bullet: D^3\hookrightarrow M$, $\gamma_t: S^1\hookrightarrow M$, $t\in [0,1]$ satisfying the four conditions in the above lemma, moreover, $\beta_t^\bullet=\beta_0^\bullet$, and $\gamma_0^\bullet$ is a standard normal disk of $\beta_0$, by using the above lemma, we extend $\beta_t^\bullet$ and $\gamma_t$ to $t\in[0,3]$ and get $\gamma_t^\bullet$ with $\gamma_t=\partial \gamma_t^\bullet$ for $t\in[0,3]$. We further assume $\gamma_1^\bullet$ and $\gamma_0^\bullet$ yield the same framing for $\gamma_1=\gamma_0$. Since $\beta_0^\bullet=\beta_3^\bullet$ and $\gamma_0^\bullet=\gamma_3^\bullet$, 
+    \begin{enumerate}[label=\emph{(\arabic*)}]
+        \item For $t\in [0,1]$, regard $\beta_t^\bullet=\beta_0^\bullet$ as dotted version of a trivial 1-handle, regard $\gamma_t=\partial\gamma_t^\bullet$ as a loop of 0-framed 2-handle. Then it gives $\mathcal{H}_1\in \pi_0\mathcal{P}$ with Cerf diagram being a single eye of (1,2)-handle pair and results in $f_{\mathcal{H}_1}\in \pi_0\Diff(M,\partial)$.
+        \item For $t\in [0,3]$, regard $\gamma_t^\bullet$ as dotted version of a trivial 2-handle (the 2-handle can be made not moving for $t\in[0,3]$ by condition (6) in above lemma), regard $\beta_t=\partial\beta_t^\bullet$ as a loop of framed 3-handle. Then it gives $\mathcal{H}_2\in \pi_0\mathcal{P}$ with Cerf diagram being a single eye of (2,3)-handle pair and results in $f_{\mathcal{H}_2}\in \pi_0\Diff(M,\partial)$.
+    \end{enumerate}
+    Then $[f_{\mathcal{H}_1}]=[f_{\mathcal{H}_2}] \in \pi_0\Diff(M,\partial)$.
+\end{proposition}
+
+\begin{proof}
+    First consider $\beta_t^\bullet, \gamma_t=\partial\gamma_t^\bullet,t\in[0,3]$, this loop of handle decompositions of $M\times I$ yields $\mathcal{H}_0\in \pi_0\mathcal{P}$ with Cerf diagram being a single eye of (1,2)-handle pair. And by doing dotted and 0-framed replacement \emph{pointwise} for $t\in [0,3]$ from $\mathcal{H}_0$, we get another pseudo-isotopy which is exactly $\mathcal{H}_2\in \pi_0\mathcal{P}$, thus $f_{\mathcal{H}_0}=f_{\mathcal{H}_2}$. 
+    
+   But note that $\beta_1^\bullet=\beta_3^\bullet$ and $\gamma_1=\gamma_3$ with the same framing induced by $\gamma_1^\bullet$ and $\gamma_3^\bullet$, so for $t\in [1,3]$, $\beta_t^\bullet$ and $\gamma_t=\partial\gamma_t^\bullet$ also determines a loop of handle constructions for $M\times I$, thus a pseudo-isotopy $\mathcal{H}\in \pi_0\mathcal{P}$. But here $\beta_t^\bullet$ intersects $\gamma_t$ transversely at a single point for all $t\in [1,3]$, which means they are all at cancelling position for all $t$, thus $[\mathcal{H}]=[\id]\in \pi_0\mathcal{P}$. So $\beta_t^\bullet, \gamma_t=\partial\gamma_t^\bullet,t\in[0,3]$ together gives a pseudo-isotopy $[\mathcal{H}_0=\mathcal{H}_1*\mathcal{H}]=[\mathcal{H}_1]\in \pi_0\mathcal{P}$.
+
+   Thus $[f_{\mathcal{H}_1}]=[f_{\mathcal{H}_0}]=[f_{\mathcal{H}_2}]\in \pi_0\Diff(M,\partial)$.
+\end{proof}
+
+For any half-unknotted implanted barbell $\beta=(R,S,\gamma)$, from the last chapter, we get a loop of (1,2)-handle pair $g_\beta\in \pi_0\mathcal{P}$ resulting in the barbell diffeomorphism. By first changing to the dotted version and then applying \Cref{prop:one-parameter-version} , we can see that there is a natural extension $\gamma_t^\bullet,t\in [0,1]$ by pulling $\gamma_0^\bullet$ along $\gamma_t$ in $T_R$, i.e. $\gamma_t^\bullet=\gamma_0^\bullet\cup_{s\in [0,t]} \gamma_s$. Thus $\gamma_1^\bullet=\gamma_0^\bullet \text{ tube}_{\gamma} R$. Thus framing of $ \gamma_1=\gamma_0$ induced by $\gamma_1^\bullet$ is the same as that induced by $\gamma_0^\bullet$ (For moving pictures of $\gamma_t^\bullet$ in the case of $\beta=\delta_k$, see \Cref{fig:move-disk}). Thus we have:
+
+\begin{corollary} \label{cor:construction-of-fbeta}
+    For any half-unknotted implanted barbell $\beta=(R,S,\gamma)$ in $M^4$, there exists $f_\beta\in \pi_0\mathcal{P}$ whose Cerf diagram contains only a single eye of (2,3)-handle pair resulting in that barbell diffeomorphism. In particular, the first Hatcher-Wagoner invariant $\Sigma(f_\beta)=0\in \Wh_2(\pi_1M)$.
+\end{corollary}
+
+\begin{remark}
+    We are not going into the definition of the first Hatcher-Wagoner invariant $\Sigma:\pi_0\mathcal{P}\to \Wh_2(\pi_1M)$(to see a clear definition, read \cite{singh2022pseudoisotopiesdiffeomorphisms4manifolds}), but briefly speaking, it records the handle slides that happen during $\{f_t: M\times I\to I\}\in \pi_1(\mathcal{F},\mathcal{E})$. So when there's only a single eye of (2,3)-handle pair, there's at most one handle for each index, so no handle slides at all time.
+\end{remark}
+
+\begin{remark}
+    Note that in the proof of the above proposition, we obtain
+    \[
+      \mathcal{H}_2=\{H_{2,t},t\in [0,3] \text{ which is a loop of (2,3)-handle constructions of } M\times I\}
+    \]
+    by doing dotted and 0-framed replacement \emph{pointwise} from
+    \[
+      \mathcal{H}_0=\{H_{0,t},t\in S^1 \text{ which is a loop of (1,2)-handle construction of }M\times I\}.
+    \]
+    Denote $Z_{\mathcal{H}_0}$ (resp. $Z_{\mathcal{H}_2}$) as the corresponding cobordism from $S^1\times M$ to $Y_\mathcal{H}=M\times I/((x,0)\sim (f_{\mathcal{H}_0}(x),1))$ (resp. $Y_{\mathcal{H}_2}=M\times I/((x,0)\sim (f_{\mathcal{H}_2}(x),1))$). Since $f_{\mathcal{H}_0}=f_{\mathcal{H}_2}$, by \Cref{rmk:replacement} we know that $Z_{\mathcal{H}_0}\cup \bar{Z}_{\mathcal{H}_2}=S^1\times X\times I$, thus $0=\Sigma(\mathcal{H}_0)+\Sigma(\bar{\mathcal{H}_2})=\Sigma(\mathcal{H}_1)+\Sigma(\bar{\mathcal{H}_2})$. Similarly, $\Theta(\mathcal{H}_1)+\Theta(\bar{\mathcal{H}_2})=0$. By \cite[section 9.1]{singh2022pseudoisotopiesdiffeomorphisms4manifolds} we know that there exists an involution $\bar{\cdot}$ on both $\Wh_2(\pi_1 M)$ and $\Wh_1(\pi_1 M; \mathbb{Z}_2\times \pi_2M)$ such that $\Sigma(\bar{f})=\bar{\Sigma}(f)$, $\Theta(\bar{f})=\bar{\Theta}(f), \forall f\in \pi_0\mathcal{P}$. For implanted barbell $\beta$, we thus have $\Sigma(g_\beta)=-\bar{\Sigma}(f_\beta)=0$, $\Theta(g_\beta)=-\bar{\Theta}(f_\beta)$. 
+\end{remark}
+
+\begin{example}
+    We apply the above procedure to Budney and Gabai's barbell diffeomorphisms $\delta_k$, changing its corresponding loop of (1,2)-handle pair which we obtained in the last chapter into the loop of (2,3)-handle pair.
+
+    Recall the loop of (1,2)-handle constructions for Cerf diagram resulting in $\delta_k$ (again we let $k=4$ for simplicity), as shown in \Cref{fig:loop-of-12-pair}.
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.7\textwidth]{T_R_for_barbell_k.png}
+        \caption{Element in $\pi_1(\Emb(S^1\times D^3, S^1\times D^3\# S^1\times S^3), *)$ which represents barbell $\delta_k$.}
+        \label{fig:loop-of-12-pair}
+    \end{figure}
+
+    Change it to the one-parameter dotted version, i.e.  $\beta_t^\bullet=\beta_0^\bullet: D^3\hookrightarrow S^1\times D^3$, $\gamma_t: S^1\hookrightarrow S^1\times D^3$, $\gamma_0=\gamma_1$ a standard meridian of $\beta_0=\partial\beta_0^\bullet$, $t\in [0,1]$ (see \Cref{fig:dotted-version}).
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.5\textwidth]{ddotted_version_of_1,2_pair.png}
+        \caption{Dotted version of the loop of (1,2)-handle pair. The dark blue is the dotted $S^2=\partial \beta_0^\bullet$, the light blue region is $\beta_t^\bullet=\beta_0^\bullet: D^3\hookrightarrow S^1\times D^3$ which represents the 1-handle.}
+        \label{fig:dotted-version}
+    \end{figure}
+
+    Now following the constructions we made in \Cref{lem:one-parameter-replacement}, we need to find $\gamma_t^\bullet, t\in [0,1]$. Let $\gamma_0^\bullet$ just be the standard normal disk of $\partial \beta_0^\bullet$, then $\gamma_t^\bullet$ is just dragging $\gamma_0^\bullet$ onto $T_R$ along the trajectory of $S^1$ in $T_R$, finally $\gamma_1^\bullet=\gamma_0^\bullet \#_{tube} R$ (see \Cref{fig:move-disk}).
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.45\textwidth]{move_0_of_disk.png}
+        \includegraphics[width=0.45\textwidth]{move_1_of_disk.png}
+        \includegraphics[width=0.5\textwidth]{move_2_of_disk.png}
+        \caption{Movement of $\gamma_t^\bullet: D^2\hookrightarrow S^1\times D^3$. The figures draw $\gamma_0^\bullet, \gamma_t^\bullet, \gamma_1^\bullet$.}
+        \label{fig:move-disk}
+    \end{figure}
+
+    Now at $t\in[1,2]$, as the constructions in \Cref{lem:one-parameter-replacement} read, consider $\phi_t: S^1\times D^3\to S^1\times D^3$, s.t. $\gamma_t^\bullet=\phi_t(\gamma_1^\bullet)=\gamma_{2-t}^\bullet$, $\beta_t^\bullet=\phi_t(\beta_1^\bullet=\beta_0^\bullet)$. In the interval $t\in [1,2]$, $\beta_t=\beta_0$ intersects $\gamma_t^\bullet$ at a single point. While $\beta_2^\bullet$ intersects $\gamma_2^\bullet$ at $S^1\cup I^1$, so when $t\in [2,3]$, $\beta_t$ shrinks in $\beta_2^\bullet$ to a standard normal sphere of $\gamma_2=\gamma_0$ so that $\beta_3=\beta_0$. Therefore, when during $t\in [2,3]$, $\beta_t$ will intersect $\gamma_t^\bullet=\gamma_0^\bullet$ at 1 point, then at 3 points, then 1 point, which will become essential to our calculations of Hatcher-Wagoner invariants. So in order to understand how $\beta_t,t\in [2,3]$ shrinks, we only need to understand $\beta_2^\bullet$:
+
+    $\beta_2^\bullet$ is the isotopy image of $\beta_1^\bullet=\beta_0^\bullet$ when pulling $\gamma_1$ back to standard $\gamma_0$ along $R$, but this is just the \emph{backward barbell diffeomorphism} with data $\beta=(R_0, S, \gamma)$. What's more, the $\beta_1^\bullet$ is just a mid-ball of this implanted barbell (see \Cref{fig:barbell-from-t1-to-t2})! Thus in \cite{Budney_2025} we know the embedded surgery description of the mid-ball after performing a barbell. In \Cref{fig:mid-ball-transformation} we draw the embedded surgery explicitly to get $\beta_2^\bullet$.
+
+    Then performing \emph{one-parameter version of dotted and 0-framed replacement} we regard $\gamma_t^\bullet,t\in [0,3]$ as the dotted version of $h_{2,t},t\in [0,3]$ and regard $\beta_t,t\in [0,3]$ as the attaching spheres of $h_{3,t}, t\in[0,3]$. Thus we change the Cerf diagram of a (1,2)-handle pair to the Cerf diagram of a (2,3)-handle pair, both resulting in barbell $\delta_k$.
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.4\textwidth]{barbell_from_t=1_to_t=2.png}
+        \caption{Pulling $\gamma_1$ back to $\gamma_0$(therefore pulling $\gamma_1^\bullet$ back to $\gamma_0^\bullet$) is equivalent to doing the barbell diffeomorphism $\beta=(R_0, S, \gamma)$.}
+        \label{fig:barbell-from-t1-to-t2}
+    \end{figure}
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.4\textwidth]{mid-ball_transformation.png}
+        \caption{The mid-ball $\beta_1^\bullet$ becomes $\beta_2^\bullet=\partial(\beta_1^\bullet \cup h_{2,b} \cup h_{2, r})$ where $h_{2,b}$ is the 2-handle with attaching $S_b^1$ the brown one and core $D^2_b=\{S \text{ tube along the brown arc\}}$, $h_{2,r}$ is the 2-handle with attaching $S_r^1$ the red one and core $D^2_r=\{R \text{ tube along the red arc\}}$. As a result, $\beta_2^\bullet= (\beta_1^\bullet\setminus (S_b^1\times D^2\cup S_r^1\times D^2))\cup (D_b^2\times S^1\cup D_r^2\times S^1) $. Therefore, $\beta_2^\bullet\cap \gamma_2^\bullet=\text{the green }S^1 \text{ and the blue }I$ in the picture.}
+        \label{fig:mid-ball-transformation}
+    \end{figure}
+\end{example}

@@ -1,0 +1,97 @@
+\chapter{Generalizations to immersed barbell diffeomorphisms}
+\label{chap:generalizations-to-immersed-barbell-diffeomorphisms}
+
+In this chapter we generalize implanted barbell diffeomorphisms to \emph{immersed barbell diffeomorphisms} from the perspective of graspers, then we show that half-unknotted immersed barbell diffeomorphisms are pseudo-isotopic to identity, and we can similarly find $f_\beta\in \pi_0\mathcal{P}$ resulting in that immersed barbell diffeomorphism such that its Cerf diagram contains a single eye of (2,3)-handle pair. Then we compute the Hatcher-Wagoner invariants for $f_\beta$. As a corollary, we show that for every $\sigma\in \pi_2 M$ and $\forall \gamma\in \pi_1 M$, $(0,\sigma)\cdot [\gamma]\in \Wh_1(\pi_1 M,\mathbb{Z}_2\times \pi_2 M)$ can be realized by a half-unknotted immersed barbell diffeomorphism, i.e. there exists $f\in \pi_0\mathcal{P}$ resulting in a half-unknotted immersed barbell diffeomorphism such that $\Sigma(f)=0, \Theta(f)=(0,\sigma)\cdot [\gamma]$.
+
+\begin{definition}
+    An \emph{immersed barbell} $\beta=(R_0,S,\gamma)$ consists of a framed immersed 2-sphere $R_0$ in $M$, a framed embedded 2-sphere $S$ in $M$, and a framed embedded arc $\gamma$ in $M$ connecting $R_0$ and $S$. By finger-pushing $R_0$ along $\gamma$ into $S$ to get another framed immersed 2-sphere $R$ in $M$ such that $R\cap S=2\text{ pts}$, we do surgery along $\nu S$ to get $M_{\nu S}$, then after surgery we get $T_R=(R\setminus D^2\times \partial I)\cup S^1\times I $ which is a framed immersed torus. As in \Cref{chap:twin-twists-and-relation-with-barbell-diffeomorphisms}, $\nu T_R$ also defines an element $[\nu T_R]\in \pi_1(\Emb(\nu S^1, M_{\nu S}), *)$. We define the corresponding \emph{immersed barbell diffeomorphism} as $\text{ps}_{\nu S}[\nu T_R]$, where we define $\text{ps}_{\nu S}$ in \Cref{def:parameterised-surgery}. 
+\end{definition}
+
+In the same manner of \Cref{prop:twist-is-pseudo-isotopic-to-id} we can show that, when $S$ is unknotted, there is a loop $g_\beta\in \pi_0\mathcal{P}$ of handle constructions of $M\times I$ containing a single (1,2)-handle pair which results in that immersed barbell diffeomorphism. And by doing \emph{one-parameter version of dotted and 0-framed replacement} stated in \Cref{lem:one-parameter-replacement} we change the loop of (1,2)-handle pair $g_\beta$ to a loop of (2,3)-handle pair $f_\beta\in \pi_0\mathcal{P}$, thus we can compute the Hatcher-Wagoner invariants for $f_\beta$. 
+
+Throughout the process, the only difference from the embedded case is that, to obtain $\gamma_t^\bullet,t\in [0,1]$ with $\gamma_t=\partial\gamma_t^\bullet$ which is the given loop of attaching spheres of the 2-handles, in the previous embedded case, we naturally choose $\gamma_t^\bullet=\gamma_0^\bullet\cup _{s\in [0,t]} \gamma_s$ (that is, pull $\gamma_0^\bullet$ along $\gamma_t,t\in [0,1]$), but now since $T_R$ is an immersed torus, it may have double self-intersection points, then there'll be $t_0<t_1$ such that $p:=\gamma_{t_0}\cap \gamma_{t_1}\neq \emptyset$ (by a reparametrization of $T_R$, which won't change the resulting $g_\beta\in \pi_0\mathcal{P}$, one can assume that for any $t_0\neq t_1$, there's at most one intersection point between $\gamma_{t_0}$ and $\gamma_{t_1}$). In this case when the intersection point is reached for the second time at $t=t_1$, one must finger-push the small intersection disk $D^2=\{\text{normal disk of }T_R \text{ at point } p\}\subset \gamma_t^\bullet, t\in (t_0,t_1)$ towards the trajectory of $\gamma_t$ to get an embedded $\gamma_t^\bullet, t>t_1$. \Cref{fig:immersed-barbell-finger-pushing} is an illustration.
+
+\begin{figure}[!ht]
+    \fcapside{
+        \caption{Here we draw a local region of $T_R$ near the self-intersection point in an $\mathbb{R}^3$-slice. $p=\gamma_{t_0}\cap \gamma_{t_1}$, $q\in \gamma_t$, and the blue region is the local part of $\gamma_t^\bullet$ in a $\mathbb{R}^3$-slice. When $t>t_1$, the blue disk $\subset \gamma_t^\bullet$ will be finger-pushed along $\gamma_t$ to ensure $\gamma_t^\bullet$ is embedded.}
+        \label{fig:immersed-barbell-finger-pushing}
+    }{
+        \includegraphics[width=0.5\textwidth]{immersed_disk.png}
+    }
+\end{figure}
+
+After understanding that we can deduce the following theorem, which is a generalization of \Cref{thm:main-calculation}:
+
+\begin{theorem}
+    For a half-unknotted immersed barbell $\beta=(R_0,S,\gamma)$ with $\beta_0^\bullet: D^3\hookrightarrow M, S=\partial\beta_0^\bullet $, Perturb self-intersections of $R_0$ away from $\beta_0^\bullet$. By finger-pushing $R_0$ along the arc, we can make $\gamma$ short enough such that $\text{int}(\beta_0^\bullet)\cap \gamma =\emptyset$. Now suppose that $\beta_0^\bullet \cap R_0=\sqcup _{i=1,...,k} S_i^1$. Choose $p_i\in S_i^1$ and let $*_0=\gamma\cap S$ be the base point. For each $i$, find a path $\delta^B_i\subset \beta=(R_0, S,\gamma)$ which is a path from $*_0$ to $p_i\in S_i^1$. Also, for each $i$, $S_i^1$ divides $R_0$ into two embedded disks $D_i$ and $D_i'$, where $D_i'$ is the one connected to the arc $\gamma$. Let $D^B_i=D_i$. Then the $f_\beta\in \pi_0\mathcal{P}$ we constructed which results in the immersed barbell diffeomorphism w.r.t. $\beta$ satisfies:
+    
+    $$\Theta(f_\beta)=\sum_{i=1,...,k} (0, [D^B_i]^{\delta_i^B})\cdot  [\delta_i^B]$$
+    Here we identify $\pi_i(M,*_0)$ with $\pi_i(M, \beta_0^\bullet)$ so that $[D_i]\in \pi_2(M,\beta_0^\bullet)$ and $\delta_i^B\in \pi_1(M,\beta_0^\bullet)$.    
+\end{theorem}
+
+\begin{proof}
+    By finger-pushing $R_0$ along $\gamma$ into $S$ to get $R$, we then attach a 1-handle, in the dotted version, we push $\beta_0^\bullet$ into $M\times I$ and cut out a neighborhood of it. On the top we just do surgery on $\nu S$ and get $T_R$ which is an immersed framed torus in $M\# S^1\times S^3$. On the left side of \Cref{fig:tubed-disk} we draw the immersed $T_R$ in the dotted version with standard $\gamma_0^\bullet$ in green. Thus we get initial data $\gamma_0^\bullet$, $\{\gamma_t,t\in [0,1]\}\in \pi_1(\Emb(\nu S^1, M\# S^1\times S^3),*)$ and $\beta_t^\bullet=\beta_0^\bullet, t\in [0,1]$. To use \emph{one-parameter version of dotted and 0-framed replacement} and calculate $\Theta(f_\beta)$ we only need to find $\gamma_t^\bullet, t\in [0,1]$. 
+    
+    As in the process from the last chapter, we have $s_i=0$, $\beta_i^*$ and $\gamma_i^*$ can be calculated in $\gamma_1^\bullet$ and $\beta_1^\bullet=\beta_0^\bullet$. By the discussions just above the theorem, we isotope $\gamma_0^\bullet$ along $\gamma_t$ to $\gamma_t^\bullet$. Whenever we reach a self-intersection point $p=\gamma_{t_1}(v)$ ($\gamma_{t}: S^1\to T_R\subset M: w\to \gamma_{t}(w)$) the second time, the normal disk at the intersection point needs to be stretched along $l_p:=\cup_{t\in [t_1, 1]} \gamma_t(v)$. Thus in the case $T_R$ has just a single self-intersection point, $\gamma_1^\bullet=(\gamma_0^\bullet\text{ tube}_\gamma R_0-D^2) \cup S^1\times l_p \cup D_1^2 $ where $S^1\times l_p=SN(T_R)|_{l_p}$ (for $X$ immersed in $M$, we use $SN(X)$ to denote the sphere bundle of $N(X)$ which is the normal bundle of $X$ in $M$), that is, each $S^1$ is a meridian sphere, and $D_1^2\subset S^2=SN(\gamma_1)|_{\gamma_1(v)}$ which bounds $S^1=SN(T_R)|_{\gamma_1(v)}$ such that $D_1^2\cap \gamma_0^\bullet=\emptyset$ (see \Cref{fig:tubed-disk} for an illustration).
+    
+    \begin{figure}[!ht]
+        \includegraphics[width=0.75\textwidth]{tubed_disk.png}
+        \caption{Here we illustrate immersed torus $T_R$ and the standard $\gamma_0^\bullet$ on the left and the desired $\gamma_1^\bullet$ on the right. If $T_R$ is embedded, $\gamma_1^\bullet\cap \beta_0^\bullet=I\cap S^1$ where $I$ is in blue and $S^1$ is in red. But since $T_R$ has a self-intersection point, by finger-pushing a small disk near the intersection point along $\gamma_t$ as we said in \Cref{fig:immersed-barbell-finger-pushing}, this induces another $S^1\subset \gamma_1^\bullet\cap \beta_0^\bullet$ in purple, which is exactly a meridian of the red $S^1$. }
+        \label{fig:tubed-disk}
+    \end{figure}
+
+    When there are more double self-intersection points, by a nice reparametrization of $T_R$, we may assume the self-intersection points are $p_j=\gamma_{t_{0,j}}(w_j)\cap \gamma_{t_{1,j}}(v_j),t_{0,j}<t_{1,j}, j=1,...,n$ and $\{v_j\}$ are distinct from each other. Then let $l_{p_j}:=\cup_{t\in [t_{1,j}, 1]} \gamma_t(v_j)$. Then $\gamma_1^\bullet=(\gamma_0^\bullet\text{ tube}_\gamma R_0-\sqcup _{j=1,...,n}D^2) \cup_{j=1,...,n} (S^1\times l_{p_j}) \cup_{j=1,...,n} D_{1,n}^2$ where $S^1\times l_{p_j}=SN(T_R)|_{l_{p,j}}$ and $D_{1,j}^2\subset S^2=SN(\gamma_1)|_{\gamma_1(v_j)}$ which bounds $S^1=SN(T_R)|_{\gamma_1(v_j)}$ such that $D_j^2\cap \gamma_0^\bullet=\emptyset$.
+
+    Then consider $\gamma_1^\bullet\cap \beta_1^\bullet$, it's $R\cap \beta_1^\bullet$ which are $k$ disjoint $S^1$, namely $S_i^1, i=1,...,k$, and several meridians of $S_i^1$ in $\beta_0^\bullet$. But for every meridian $S^1=SN(T_R)|_{x_m}, x_m=\gamma_{t_{j,m}}(v_j)\in l_{p_j}, t_{j,m}\in [t_{1,j},1]$ for some $j$ (like the one in purple in \Cref{fig:tubed-disk}), $D^B=(SN(T_R)|_{l_{p_j}[t_{j,m},1]} \cup D_{1,j}^2)\subset \gamma_1^\bullet$ which bounds that $S^1$ is obviously null in $\pi_2 (M,\beta_0^\bullet)$, since it bounds $D^3=DN(T_R)|_{l_{p_j}[t_{j,m}, 1]}\cup D_{1,j}^3, D_{1,j}^3\subset D^3=DN(\gamma_1)|_{\gamma_1(v_j)}$ where $DN(T_R)$ denotes the normal disk bundle of $T_R$. Thus in the calculation of $\Theta$, every meridian $S^1$ corresponds to $(0,0)\cdot[\alpha]=0\in \Wh_1(\pi_1 M; \mathbb{Z}_2\times \pi_2 M)$, so they make no contributions. So $\Theta(f_\beta)=\sum_{i=1,...,k} (0, \beta_i^*)\cdot [\gamma_i^*]$, but for the same reason, $\beta_i^*=[D_i^B]^{\delta_i^B}$, that is, stretching the disk near the intersection point along $l_{p_j}$ makes no difference in $\pi_2 (M)=\pi_2(M,\beta_0^\bullet)$. Thus, $\Theta(f_\beta)=\sum_{i=1,...,k} (0, [D^B_i]^{\delta_i^B})\cdot [\delta_i^B]$.
+\end{proof}
+
+\begin{corollary} \label{cor:realize-without-odd-sphere}
+    For any $\sigma\in \pi_2 M$ with $w_2^M(\sigma)=0$, $\forall \alpha\in \pi_1 M$, there is a half-unknotted immersed barbell $\beta=(R, S, \gamma)$ and $f_\beta\in \ker\Sigma\subset \pi_0\mathcal{P}$ with its Cerf diagram being a single eye of (2,3)-handle pair resulting in the immersed barbell diffeomorphism w.r.t. $\beta$ such that $\Theta(f_\beta)=(0,\sigma)\cdot [\alpha]$.
+\end{corollary}
+
+\begin{proof}
+    For $\sigma$ satisfying the condition, we first find $R$ which is an immersed 2-sphere with $q\in R$, such that $R$ represents $\sigma\in \pi_2(M,q)$. Since $w_2^M(\sigma)=0$, we can induce some interior twists (see \cite[section 1.3]{freedman2014topology}) locally on $R$ away from $q$ to get $R_\sigma$ which is a framed immersed 2-sphere representing the same $\sigma\in \pi_2(M,q)$. Then find a small embedded $\beta_0^\bullet: D^3\hookrightarrow M$ away from $R_\sigma$ with base point $*_0\in S:=\partial \beta_0^\bullet$. Fix $p\in int(\beta_0^\bullet)$. Find a path $\gamma_1$ from $*_0$ to $p$ such that $int(\gamma_1)\cap (\beta_0^\bullet\sqcup R_\sigma)=\emptyset$, $\gamma_1$ represents $\alpha\in \pi_1(M,\beta_0^\bullet)$. Find $\gamma_2$ from $p$ to $q$ such that $int(\gamma_2)\cap (\beta_0^\bullet\sqcup R_\sigma)=\emptyset$, $(\gamma_1*\gamma_2)^{-1}$ induces a natural isomorphism from $\pi_2(M,q)$ to $\pi_2(M,*_0)$: $\tau\to \tau^{(\gamma_1*\gamma_2)^{-1}}$, we need $\sigma^{(\gamma_1*\gamma_2)^{-1}}=\sigma$. Let $\gamma=\gamma_1*\gamma_2$, then let $\beta=(R_\sigma, S, \gamma)$. By the above theorem, $\Theta(f_\beta)=(0,\sigma)\cdot [\alpha]$.
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.3\textwidth]{desired_immersed_barbell.png}
+        \caption{An illustration of $\beta=(R_\sigma, S,\gamma=\gamma_1*\gamma_2)$}
+        \label{fig:desired-immersed-barbell}
+    \end{figure}
+\end{proof}
+
+When there is an odd 2-sphere $\tau\in \pi_2M$ (i.e. $w_2^M(\tau)=1$), we can do more (the key point is that the $\pi_2$ component of $\Theta$ only depends on $D_i$, not on $D_i'$):
+\begin{corollary} \label{cor:realize-with-odd-sphere}
+    If there exists $\tau\in \pi_2 M$ with $w_2^M(\tau)=1$, then for any $\sigma\in \pi_2M$, $\forall \alpha\in \pi_1 M$, there is a half-unknotted immersed barbell $\beta=(R, S, \gamma)$ and $f_\beta\in \ker\Sigma\subset \pi_0\mathcal{P}$ with its Cerf diagram being a single eye of (2,3)-handle pair resulting in the immersed barbell diffeomorphism w.r.t. $\beta$ such that $\Theta(f_\beta)=(0,\sigma)\cdot [\alpha]$.
+\end{corollary}
+
+\begin{proof}
+    For $\sigma\in \pi_2 M$ with $w_2^M(\sigma)=0$, the result just follows from \Cref{cor:realize-without-odd-sphere}. For $w_2^M(\sigma)=1$. We find an immersed 2-sphere $R_\sigma$ representing $\sigma$, and an immersed 2-sphere $R_\tau$ representing $\tau$. Connect $R_\tau$ and $R_\sigma$ with a tube along an embedded arc $\gamma_0$ disjoint from both $R_\sigma$ and $R_\tau$ to get $R(\gamma_0)$. Then $R(\gamma_0)$ can be made into a framed immersed 2-sphere by inducing some interior twists locally. Find a small normal disk $\beta_0^\bullet$ on $\gamma_0$, let $*_0\in S=\partial \beta_0^\bullet$ be the base point. Find another embedded path $\gamma$ from $*_0$ to $p_\tau\in R_\tau$ away from $\beta_0^\bullet$ and $R(\gamma_0)$. See \Cref{fig:realize-with-odd-sphere} for an illustration. By suitably choosing $\gamma_0$ and $\gamma$, we can find $\beta=(R(\gamma_0), S, \gamma)$ such that $\Theta(f_\beta)=(0,\sigma)\cdot[\alpha]$.
+
+    \begin{figure}[!ht]
+        \includegraphics[width=0.3\textwidth]{realize_with_odd_sphere.png}
+        \caption{An illustration for the proof of \Cref{cor:realize-with-odd-sphere}}
+        \label{fig:realize-with-odd-sphere}
+    \end{figure}
+\end{proof}
+
+Combining the above two corollaries we get:
+
+\begin{corollary}
+    For any $\sigma\in \pi_2 M$, $\forall \alpha\in \pi_1 M$, there is a half-unknotted immersed barbell $\beta=(R, S, \gamma)$ and $f_\beta\in \ker\Sigma\subset \pi_0\mathcal{P}$ with its Cerf diagram being a single eye of (2,3)-handle pair resulting in the immersed barbell diffeomorphism w.r.t. $\beta$ such that $\Theta(f_\beta)=(0,\sigma)\cdot [\alpha]$.
+\end{corollary}
+
+Singh proved in \cite{singh2022pseudoisotopiesdiffeomorphisms4manifolds} that for any compact $M^4$,
+\[
+  W=\langle(s,\sigma)\cdot[\gamma], s=0 \text{ or }w_2^M(\sigma)\neq 0\rangle\subset \Wh_1(\pi_1 M; \mathbb{Z}_2\times \pi_2 M),
+\]
+we have $W\subset \Theta(\ker \Sigma)$. In particular, when $M=X^3\times I$, $W=\langle(0, \sigma)\cdot[\gamma]\rangle\subset \Wh_1(\pi_1 M; \mathbb{Z}_2\times \pi_2 M)$ since all $\sigma\in \pi_2 M$ have $w_2^M(\sigma)=0$. Then,
+
+\begin{corollary}
+    For $M=X^3\times I$, all Hatcher-Wagoner invariants $\Theta$ realizable by Singh's procedure can be realized by compositions of $f_\beta$, where $\beta$ is an immersed half-unknotted barbell.
+\end{corollary}
+
+In particular, for $M=(X_1\# X_2)\times I$ with $X_i$ closed, orientable, aspherical 3-manifold, Singh used $W$ and approximations for $K_3(\mathbb{Z}\pi_1 M)$ and $\Theta(\mathcal{J}\cap \ker \Sigma)$ to show that there's $K\subset \pi_0\Diff_{PI}(M,\partial)$ and a surjection $K\to \bigoplus_{i\in \mathbb{N}} \mathbb{Z}$. Now by the above corollary, we have:
+
+\begin{corollary}
+    Let $M=(X_1\# X_2)\times I$ with $X_i$ closed, orientable, aspherical 3-manifold. In this case all $\sigma\in \pi_2 M=\mathbb{Z}[\pi_1 X_1*\pi_1 X_2]$ can be realized by embedded $S^2$ with $w_2^M(\sigma)=0$. Then $$\langle\text{implanted half-unknotted barbell diffeomorphisms}\rangle\subset \pi_0\Diff_{PI}(M,\partial)$$ is infinitely generated and of infinite $\mathbb{Z}$-rank. 
+\end{corollary}
