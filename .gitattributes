@@ -1,5 +1,0 @@
-content/** merge=ours
-figures/** merge=ours
-preamble/meta.tex merge=ours
-preamble/custom.tex merge=ours
-references.bib merge=ours
