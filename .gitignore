@@ -84,3 +84,6 @@ Thumbs.db
 
 ## Targets
 target/
+
+## Inkscape output files
+inkscape/*.png
