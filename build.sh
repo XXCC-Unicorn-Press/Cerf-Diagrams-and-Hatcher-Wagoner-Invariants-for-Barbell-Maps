@@ -15,13 +15,15 @@ cp inkscape/backcover.png "$TARGET_DIR/backcover.png"
 
 # LaTeX document name
 TARGET_NAME="Cerf_Diagrams_and_Hatcher-Wagoner_Invariants_for_Barbell_Maps"
-PRINT_VERSION_PDF="${TARGET_NAME}_Printed.pdf"
+PRINT_VERSION_PDF="${TARGET_NAME}_Print.pdf"
 ONLINE_VERSION_PDF="${TARGET_NAME}_Online.pdf"
 
 # Compile the LaTeX document (print version)
-LATEX_VERSION="PRINT" latexmk
+LATEX_MODE="PRINT" latexmk
 cp main.pdf "$TARGET_DIR/$PRINT_VERSION_PDF"
+latexmk -C
 
 # Compile the LaTeX document (online version)
-LATEX_VERSION="ONLINE" latexmk
+LATEX_MODE="ONLINE" latexmk
 cp main.pdf "$TARGET_DIR/$ONLINE_VERSION_PDF"
+latexmk -C
