@@ -7,23 +7,19 @@ cd "$SCRIPT_DIR"
 # Ensure the target directory exists
 TARGET_DIR="target"
 mkdir -p "$TARGET_DIR"
+rm -rf "$TARGET_DIR"/*
 
 # Export Inkscape figures
 cp inkscape/logo.png "$TARGET_DIR/logo.png"
 cp inkscape/frontcover.png "$TARGET_DIR/frontcover.png"
 cp inkscape/backcover.png "$TARGET_DIR/backcover.png"
 
-# LaTeX document name
-TARGET_NAME="Cerf_Diagrams_and_Hatcher-Wagoner_Invariants_for_Barbell_Maps"
-PRINT_VERSION_PDF="${TARGET_NAME}_Print.pdf"
-ONLINE_VERSION_PDF="${TARGET_NAME}_Online.pdf"
-
 # Compile the LaTeX document (print version)
 LATEX_MODE="PRINT" latexmk
-cp main.pdf "$TARGET_DIR/$PRINT_VERSION_PDF"
+cp main.pdf "$TARGET_DIR/print.pdf"
 latexmk -C
 
 # Compile the LaTeX document (online version)
 LATEX_MODE="ONLINE" latexmk
-cp main.pdf "$TARGET_DIR/$ONLINE_VERSION_PDF"
+cp main.pdf "$TARGET_DIR/online.pdf"
 latexmk -C
