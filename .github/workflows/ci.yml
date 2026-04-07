@@ -19,14 +19,6 @@ jobs:
         with:
           os: debian # use debian-based TeX Live image for better compatibility with apt-get
           run: |
-            # set non-interactive mode for apt-get to avoid prompts during installation
-            export DEBIAN_FRONTEND=noninteractive
-
-            # install Inkscape for SVG to PDF conversion
-            apt-get update -y
-            apt-get install -y inkscape
-
-            # build the LaTeX document using latexmk with the ONLINE version flag
             chmod +x ./build.sh
             ./build.sh
 

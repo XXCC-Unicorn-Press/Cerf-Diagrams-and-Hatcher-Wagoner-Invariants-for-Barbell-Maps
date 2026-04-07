@@ -9,7 +9,6 @@ TARGET_DIR="target"
 mkdir -p "$TARGET_DIR"
 
 # Export Inkscape figures
-./inkscape/export.sh
 cp inkscape/logo.png "$TARGET_DIR/logo.png"
 cp inkscape/frontcover.png "$TARGET_DIR/frontcover.png"
 cp inkscape/backcover.png "$TARGET_DIR/backcover.png"
