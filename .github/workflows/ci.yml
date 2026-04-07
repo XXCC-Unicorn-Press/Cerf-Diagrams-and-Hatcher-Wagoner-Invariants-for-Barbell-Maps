@@ -16,10 +16,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Run export script
+      - name: Run compile script
         run: |
-          chmod +x ./export.sh
-          ./export.sh
+          chmod +x ./compile.sh
+          ./compile.sh
 
       - name: Deploy target/ to gh-pages
         uses: peaceiris/actions-gh-pages@v4
