@@ -41,3 +41,17 @@ This is because GitHub actions do not support Inkscape, so we cannot directly us
 This template uses GitHub actions to automate the building and publishing of the journal issue.
 When you push changes to the \verb|main| branch, the GitHub action will automatically build both formats of the journal issue and publishes them onto GitHub Pages.
 The published journal issue can be accessed at \url{\docpublisherwebsite/<repo-name>}.
+
+\section{Synchronization with template updates}
+
+When the template repository is updated, you can run \verb|./sync-template.sh| to synchronize the changes to your journal issue project.
+This script will fetch the latest changes from the template repository and merge them into your project.
+Note that project-specific changes will not be overwritten by the synchronization, which includes the following files:
+\begin{itemize}
+  \item \verb|content/|
+  \item \verb|figures/|
+  \item \verb|preamble/meta.tex|
+  \item \verb|preamble/custom.tex|
+  \item \verb|references.bib|
+\end{itemize}
+You may need to resolve some merge conflicts manually, but most of the changes will be automatically merged by Git.
