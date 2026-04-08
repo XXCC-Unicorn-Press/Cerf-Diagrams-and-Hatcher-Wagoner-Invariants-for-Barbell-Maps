@@ -1,15 +1,69 @@
 \chapter{Usage}
 \label{chap:usage}
 
-To turn a written article into a journal issue using this template, you can follow these steps:
+\section{Create the project}
 
-\begin{enumerate}[label=\textbf{(\arabic*)}]
-  \item Copy \verb|content/|, \verb|figures/|, \verb|preamble/custom.tex|, and \verb|references.bib| from your article project.
-  \item \verb|\include| the content files in \verb|main.tex|. You should place front matter files (e.g., introduction) to after \verb|\frontmatter| and main content files (e.g., features) to after \verb|\mainmatter|.
-  \item Change the ``section'' commands to ``chapter'' commands in the content files.
-  \item Modify the metadata in \verb|preamble/metadata.tex|.
-  \item Update the front cover with the correct volume and issue numbers.
-  \item Run \verb|./resources/export.sh| to export the covers from \verb|.svg| format to \verb|.png| format, which is the format used in the journal issue.
-  \item Run \verb|./build.sh| to build the journal issue. The output files will be saved in the \verb|target/| directory.
-  \item Push the changes to the \verb|main| branch to publish the journal issue onto GitHub Pages.
-\end{enumerate}
+There are two ways to create a journal issue project:
+\begin{itemize}
+  \item Create a GitHub repository with template \href{https://github.com/XXCC-Unicorn-Press/journal-template}{\texttt{XXCC-Unicorn-Press/journal-template}} and clone the repository to your local machine.
+  \item Run \verb|git clone --depth 1 <repository-url>| to clone this repository to your local machine.
+\end{itemize}
+
+After creating the project, run \verb|./build.sh| to build the journal issue. The output files will be saved in the \verb|target/| directory.
+
+\section{Migrate content from article projects}
+
+Copy the following files from your article project to the journal issue project:
+\begin{center}
+  \texttt{content/}
+    \hspace{1em}
+  \texttt{figures/}
+    \hspace{1em}
+  \texttt{preamble/custom.tex}
+    \hspace{1em}
+  \texttt{references.bib}
+\end{center}
+
+Then modify \texttt{main.tex} to include the content files. You should place front matter files (e.g., introduction) to after \verb|\frontmatter| and main content files (e.g., features) to after \verb|\mainmatter|.
+
+Finally, promote the title levels in the content files, like ``\verb|\section|'' to ``\verb|\chapter|''.
+This can be done by giving the following prompt to an AI assistant:
+
+\begin{quotation}
+  \vspace{-3em}
+  \setlength{\parskip}{0.5em}
+  \setlength{\parindent}{0em}
+  \small\noindent
+
+  I am migrating an article project into a journal issue. The source files are located in the \texttt{content/} directory. 
+
+  I need to promote the heading levels throughout the project (e.g., converting \verb|\section| to \verb|\chapter|, \verb|\subsection| to \verb|\section|, and so on). This adjustment should apply to all relevant occurrences, including but not limited to:
+
+  \textbf{Structuring commands}: \verb|\section|, \verb|\subsection|, etc. \\  
+  \textbf{Cross-references}: Labels (e.g., \verb|\label{sec:...}|), references (e.g., \verb|\ref{sec:...}|), and related plain text (e.g., ``the previous section'').
+
+  \textbf{Important:} Please ensure these changes are context-aware. Do not modify ``section'' when it refers to different mathematical or logical concepts (e.g., ``section of a fibration'') or when it appears within citation arguments (e.g., \verb|\cite[section 1.2]{...}|).
+\end{quotation}
+
+\section{Modify the metadata}
+
+Modify the metadata in \texttt{preamble/metadata.tex}, including the journal title, volume number, issue number, publication date, and so on.
+Update the front cover \texttt{resources/frontcover.svg} with the correct volume and issue numbers.
+\textbf{Remember} to run \verb|./resources/export.sh| to export the covers from \verb|.svg| format to \verb|.png| format, which is the format used in the journal issue.
+
+In addition, you may add some extra pages, like dedication, editorial, and so on.
+Put those files in the \texttt{frontmatter/} directory and \verb|\include| them in \texttt{main.tex} after \verb|\frontmatter|.
+
+\section{Publish the journal issue}
+
+Before you publish the journal issue, please follow the checklist below to make sure everything is ready:
+\begin{itemize}
+  \item Have you updated the metadata in \verb|preamble/metadata.tex|?
+  \item Have you updated the front cover with the correct volume and issue numbers?
+  \item Have you run \verb|./resources/export.sh| to export the covers?
+  \item Have you built the journal issue by running \verb|./build.sh|?
+  \item Have you checked the output files in the \verb|target/| directory?
+\end{itemize}
+
+After you have checked everything, push the changes to the \verb|main| branch to publish the journal issue onto GitHub Pages.
+Then you can update the website of the publisher to include the new journal issue.
