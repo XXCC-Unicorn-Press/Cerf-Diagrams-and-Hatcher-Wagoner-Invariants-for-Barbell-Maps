@@ -57,3 +57,9 @@
 
 %% Support subfigure.
 \usepackage{subcaption}
+
+%% Use the same counter for figures and tables.
+\makeatletter
+\let\c@figure\c@table
+\let\c@equation\c@table
+\makeatother
