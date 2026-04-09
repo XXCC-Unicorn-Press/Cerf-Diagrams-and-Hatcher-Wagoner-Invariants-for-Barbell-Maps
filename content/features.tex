@@ -44,9 +44,9 @@ The published journal issue can be accessed at \url{\docpublisherwebsite/<repo-n
 
 \section{Synchronization with template updates}
 
-When the template repository is updated, you can run \verb|./sync-template.sh| to synchronize the changes to your journal issue project.
-This script will fetch the latest changes from the template repository and merge them into your project.
-Note that project-specific changes will not be overwritten by the synchronization, which includes the following files:
+When the template repository is updated, you can use \verb|sync-template| CLI tool to synchronize the changes.
+See \url{https://github.com/XXCC-Unicorn-Press/sync-template} for more details on how to use this tool.
+The following files and directories will be ignored during the synchronization process, to avoid overwriting your content:
 \begin{itemize}
   \item \verb|content/|
   \item \verb|figures/|
